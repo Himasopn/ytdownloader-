@@ -1,0 +1,27 @@
+{
+  "name": "YouTube Downloader Telegram Bot",
+  "description": "A simple Telegram bot that downloads YouTube videos or audio using yt-dlp.",
+  "repository": "https://github.com/Himasopn/ytdownloader-",
+  "keywords": ["telegram", "youtube", "downloader", "bot", "yt-dlp"],
+  "env": {
+    "TOKEN": {
+      "description": "Your Telegram Bot Token (from BotFather)",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [],
+  "scripts": {
+    "postdeploy": "echo 'Deployment successful! Your bot should start automatically.'"
+  }
+}
